@@ -1,5 +1,6 @@
 # Job Application Form
 My first website was a Job Application Form to gather information about potential candidates :clipboard:
+<img src="https://github.com/Maruku98/Job-Application-Form/assets/133391272/ddd0bead-25f7-4257-b97e-11880c885d16" width="500">
 
 ## Overview
 This was my first project! 🥳<br></br>
