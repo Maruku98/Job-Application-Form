@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles-Job Application Form.css">
+  <title>Job Application Form</title>
+</head>
+<body>
+
+    <!-- TITLE -->
+    <header>
+      <h1 id="title">JOB FORM</h1>
+    </header>
+
+    <!-- MAIN DOCUMENT -->
+    <form id="survey-form" action="#" method="POST">
+
+      <p id="subtitle">Please create an account to apply to the job</p>  <!-- SUBTITLE-->
+
+      <fieldset id="personal-details">   <!-- FIRST INPUT FIELD -->
+        <label for="name" class="question-text">Name*</label>
+        <input type="text" id="name" class="block-input text" placeholder="Please enter your name" name="name" required>
+
+        <label for="email" class="question-text">Email*</label>
+        <input type="email" id="email" class="block-input no-select" placeholder="Please enter your email" name="email" required>
+
+        <label for="number" class="question-text">Age</label>
+        <input type="number" id="number" class="block-input no-select" min="18" max="100" placeholder="Please enter your age" name="age">
+
+        <label for="password" class="question-text">Password*</label>
+        <input type="password" id="password" class="block-input no-select" placeholder="Your password must contain a number, an uppercase, and a lowercase character" name="password" required>
+
+        <label for="password2" class="question-text">Repeat your password*</label>
+        <input type="password" id="password2" class="block-input no-select" placeholder="Please repeat your password" name="repeat-password" required>
+
+        <p id="notification">Required fields are marked with "*"</p>
+      </fieldset>
+
+      <fieldset id="location">  <!-- SECOND INPUT FIELD -->
+        <p class="question-text">Where are you living now?</p>
+          <label><input type="radio" name="continent" value="europe" checked>Europe</label><br>
+          <label><input type="radio" name="continent" value="asia">Asia</label><br>
+          <label><input type="radio" name="continent" value="africa">Africa</label><br>
+          <label><input type="radio" name="continent" value="america">America</label><br>
+          <label><input type="radio" name="continent" value="oceania">Oceania</label>
+      </fieldset>
+
+      <fieldset id="interests">  <!-- THIRD INPUT FIELD -->
+        <p class="question-text">Why are you interested in our company?</p>
+          <label><input type="checkbox" value="environment">International environment</label><br>
+          <label><input type="checkbox" value="work-modality">Work modality</label><br>
+          <label><input type="checkbox" value="salaries">Competitive salaries</label><br>
+          <label><input type="checkbox" value="communication">Good communication</label><br>
+          <label><input type="checkbox" value="location">Office location</label><br>
+          <label><input type="checkbox" value="technology">Technology engagement</label><br>
+          <label><input type="checkbox" value="team">Multi-cultural working team</label><br>
+          <label><input type="checkbox" value="hours">Flexible work hours</label>
+      </fieldset>
+
+      <fieldset id="resume">  <!-- FOURTH INPUT FIELD -->
+        <p class="question-text">Resume</p>
+          <p>Please upload your resume</p>
+          <input id="file" type="file">
+          <label id="file-label" for="file">Upload Resume</label>
+          <p class="resume italic">Don't forget to attach an updated resume</p>
+          <label class="resume">
+          <input type="checkbox" value="terms" required>I have read and accept the
+              <a href="#" target="_blank">Terms and Conditions</a></label>
+      </fieldset>
+
+      <fieldset id="reference">  <!-- FIFTH INPUT FIELD -->
+        <p class="question-text">How did you hear about us?</p>
+          <select class="block-input" required>
+            <option selected>(select an option)</option>
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="Glassdoor">Glassdoor</option>
+            <option value="Infojobs">Infojobs</option>
+            <option value="YouTube">YouTube</option>
+          </select>
+      </fieldset>
+
+      <fieldset id="salary-expectations">  <!-- SIXTH INPUT FIELD -->
+        <p class="question-text">What are your salary expectations?</p>
+          <select class="block-input">
+            <option selected>(select an option)</option>
+            <option value="€21,000 - €23,000">€21,000 - €23,000</option>
+            <option value="€23,000 - €25,000">€23,000 - €25,000</option>
+            <option value="€25,000 - €27,000">€25,000 - €27,000</option>
+            <option value="€27,000 - €30,000">€27,000 - €30,000</option>
+            <option value="€30,000+">€30,000+</option>
+          </select>
+      </fieldset>
+
+      <fieldset id="more-info"> <!-- LAST INPUT FIELD -->
+        <p class="question-text">Let us know more about you</p>
+          <textarea id="textarea" class="text" rows="4" resize="none"></textarea>
+      </fieldset>
+
+      <input id="submit-button" type="submit" value="SIGN UP"> <!-- SUBMIT BUTTON -->
+
+    </form>
+
+    <footer id="footer">
+      <p><a href="https://www.linkedin.com/in/marc-parrilla-buixeda-a5ba17181/">Marc Parrilla</a></p>
+      <p>Front-End Developer</p>
+      <p>2023</p>
+    </footer>
+
+  <script src="scripts-Job Application Form.js"></script>
+</body>
+</html>

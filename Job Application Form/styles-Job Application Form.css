@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --black: hsl(0, 0%, 25%);
+  --blue: hsl(195, 100%, 50%);
+  --golden: hsl(52, 100%, 50%);
+}
+html {
+  scroll-behavior: smooth;
+  cursor: default;
+}
+@font-face {
+  font-family: mySurveyFont;
+  src: url(assets/Poppins-Regular.ttf);
+}
+body {
+  background: url("assets/background1.jpg"), #252525;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: mySurveyFont;
+  font-size: 1.2em;
+  color: var(--blue);
+  width: clamp(460px, 80%, 800px);
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  background-color: var(--golden);
+  margin: 40px 0;
+  padding: 0;
+  border-radius: 5px;
+}
+#title {
+  font-family: "Franklin Gothic Book";
+  font-size: 4em;
+  letter-spacing: 10px;
+  color: var(--black);
+  margin: 0;
+  padding: 20px 30px;
+  border: 4px solid transparent;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
+}
+#title:hover {
+  color: var(--golden);
+  background-color: var(--black);
+  border: 4px solid var(--golden);
+  border-radius: 5px;
+}
+#subtitle {
+  font-size: 1.2em;
+  text-align: left;
+  margin: 0px 0px -20px 0px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--blue);
+}
+.question-text {
+  display: block;
+  position: relative;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: var(--golden);
+}
+.question-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--blue);
+  transition: width 0.5s ease-out;
+}
+.question-text:hover::before {
+  width: 100%;
+}
+
+/* MAIN DOCUMENT */
+fieldset {
+  margin: 40px auto;
+  padding: 40px;
+  background-color: hsla(0, 0%, 15%, 0.8);
+  border: none;
+  border-bottom: 5px solid var(--blue);
+  border-radius: 8px;
+  transition: background-color 0.3s ease-out;
+}
+fieldset:hover {
+  background-color: hsl(0, 0%, 28%);
+}
+.block-input {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3em;
+  background-color: white;
+  padding-left: 10px;
+  border: 2px solid black;
+  border-radius: 2px;
+  font-family: inherit;
+  margin: 10px 0 30px 0px;
+}
+#notification {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0;
+}
+fieldset p {
+  margin: 10px auto;
+}
+fieldset a {
+  color: inherit;
+}
+.resume {
+  font-size: 0.7em;
+}
+#file {
+  display: none;
+}
+#file-label {
+  background-color: var(--golden);
+  padding: 0.3rem 1rem;
+  color: var(--black);
+  font-weight: 700;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: 
+    background-color 0.2s ease-in,
+    color 0.2s ease-in,
+    border 0.2s ease-in;
+
+}
+#file-label:hover {
+  background-color: transparent;
+  color: var(--golden);
+  border: 3px solid var(--blue);
+}
+.resume.italic {
+  display: block;
+  font-style: italic;
+  margin-top: 20px;
+}
+#textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 0px;
+  padding-left: 10px;
+}
+input[type="radio"], input[type="checkbox"] {
+  margin: 25px 15px 0 0;
+  accent-color: var(--golden);
+  transform: scale(1.2);
+}
+#submit-button {
+  display: block;
+  margin: 0px auto 40px auto;
+  width: 50%;
+  border-radius: 8px;
+  padding: 25px 20px;
+  background-color: var(--black);
+  letter-spacing: 3px;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--blue);
+  border: 4px solid transparent;
+  transition: border 0.5s ease-out;
+  cursor: pointer;
+}
+@keyframes myanimation {
+  25% {transform: translateX(15px)}
+  50% {transform: translateX(0px)}
+  75% {transform: translateX(-15px)}
+  100% {transform: translateX(0px)}
+}
+#submit-button:hover {
+  animation: myanimation 200ms linear;
+  border: 4px solid var(--golden);
+}
+#footer {
+  background-color: var(--black);
+  color: var(--golden);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.2rem 0;
+  border-radius: 8px;
+  border-top: 3px solid var(--blue)
+}
+#footer a {
+  text-decoration: none;
+  color: inherit;
+}
+@media (max-width: 475px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    min-width: 350px;
+  }
+}
